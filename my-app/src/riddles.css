@@ -1,0 +1,99 @@
+.container {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0px;
+  background: linear-gradient(dodgerblue, yellow);
+  background-attachment: fixed;
+}
+
+.block {
+  padding: 10px 10px;
+  width: 1200px;
+  min-height: 130px;
+  border: 2px solid #000;
+  background-color: lightgrey;
+  position: relative;
+  margin: 15px;
+}
+
+.riddle {
+  padding: 1px 5px;
+  font-size: 18px;
+  width: 1190px;
+  min-height: 77px;
+  background-color: white;
+  border: 2px solid #000;
+  position: relative;
+}
+
+textarea {
+  display: block;
+}
+
+.answer {
+  padding-top: 14px;
+  position: relative;
+}
+
+.answer input {
+  border: 2px solid black;
+  padding: 10px 5px;
+  width: 200px;
+  height: 4px;
+}
+
+.answer-false {
+  font-size: 15px;
+  font-weight: bold;
+  color: red;
+}
+
+.answer-true {
+  font-size: 15px;
+  font-weight: bold;
+  color: green;
+  pointer-events: none;
+}
+
+button {
+  width: 100px;
+  height: 27px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  border: 2px solid black;
+  cursor: pointer;
+  margin: 2px;
+}
+
+button:hover {
+  background-color: beige;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+  margin: 20px;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
