@@ -1,8 +1,8 @@
-import Riddle from "./Riddle";
-import AddRiddle from "./AddRiddle";
-import {useEffect, useState} from "react";
+import Riddle from './Riddle';
+import AddRiddle from './AddRiddle';
+import {useEffect, useState} from 'react';
 
-const localURL = "http://127.0.0.1:5000/"
+const localURL = 'http://127.0.0.1:5000/'
 
 function App() {
   const [data, setData] = useState([]);
@@ -28,7 +28,7 @@ function App() {
     });
     const id = await initialResponse.json();
     const newData = [...data];
-    newData.push({"id": id, "riddle": riddle});
+    newData.push({'id': id, 'riddle': riddle});
     setData(newData);
   }
 
