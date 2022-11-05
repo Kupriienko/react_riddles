@@ -1,8 +1,8 @@
+import {useEffect, useState} from 'react';
 import Riddle from './Riddle';
 import AddRiddle from './AddRiddle';
-import {useEffect, useState} from 'react';
 
-const localURL = 'http://127.0.0.1:5000/'
+const localURL = 'http://127.0.0.1:5000/';
 
 function App() {
   const [data, setData] = useState([]);
@@ -37,7 +37,7 @@ function App() {
           <div className='riddles' id='riddles'>
               {data.map((riddle) => (<Riddle riddle={riddle['riddle']} id={riddle['id']}/>))}
               <h1>Додайте свою загадку:</h1>
-              <AddRiddle func={addRiddle}/>
+              <AddRiddle onRiddleAdd={addRiddle}/>
           </div>
       </div>
   );

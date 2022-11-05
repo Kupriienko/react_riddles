@@ -1,5 +1,5 @@
-import './riddles.css';
 import {useState} from 'react';
+import './riddles.css';
 
 function AddRiddle(props) {
   const [riddle, setRiddle] = useState('');
@@ -11,7 +11,7 @@ function AddRiddle(props) {
         <div className='answer'>
             <input type='text' name='answer' onChange={(event) => setAnswer(event.target.value)}
                    placeholder='Введіть до неї відповідь'/>
-            <button onClick={() => props.func(riddle, answer)}>Додати</button>
+            <button onClick={() => props.onRiddleAdd(riddle, answer)}>Додати</button>
         </div>
     </div>
   );

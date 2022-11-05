@@ -1,5 +1,5 @@
-import './riddles.css';
 import {useState} from 'react';
+import './riddles.css';
 
 const localURL = 'http://127.0.0.1:5000/verifyAnswer?';
 
