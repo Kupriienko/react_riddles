@@ -35,7 +35,7 @@ function App() {
   return (
       <div className='container'>
           <div className='riddles' id='riddles'>
-              {data.map((riddle) => (<Riddle riddle={riddle['riddle']} id={riddle['id']}/>))}
+              {data.map((riddle) => (<Riddle riddle={riddle['riddle']} id={riddle['id']} key={riddle['id']} />))}
               <h1>Додайте свою загадку:</h1>
               <AddRiddle onRiddleAdd={addRiddle}/>
           </div>
