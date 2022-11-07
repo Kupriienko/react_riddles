@@ -8,7 +8,7 @@ function Riddle(props) {
   const [correctness, setCorrectness] = useState(null);
   useEffect(() => {
       async function userData() {
-          for (const [, value] of Object.entries(localStorage)) {
+          for (const value of Object.values(localStorage)) {
               const data = JSON.parse(value);
               if (data[0] === props.id) {
                   setAnswer(data[1]);
