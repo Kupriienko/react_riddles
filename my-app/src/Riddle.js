@@ -9,7 +9,7 @@ function Riddle(props) {
   useEffect(() => {
       async function userData() {
           const data = Object.values(localStorage).map(JSON.parse).find((data) => data[0] === props.id);
-          if (typeof data === "object") {
+          if (data) {
               setAnswer(data[1]);
               setCorrectness(data[2]);
           }
