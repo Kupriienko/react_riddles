@@ -1,21 +1,12 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import './riddles.css';
 
 const localURL = 'http://127.0.0.1:5000/verifyAnswer?';
 
 function Riddle(props) {
-  const [answer, setAnswer] = useState('');
-  const [correctness, setCorrectness] = useState(null);
-  useEffect(() => {
-      async function userData() {
-          const data = Object.values(localStorage).map(JSON.parse).find((data) => data[0] === props.id);
-          if (data) {
-              setAnswer(data[1]);
-              setCorrectness(data[2]);
-          }
-      }
-      userData();
-  }, [props]);
+  const data = Object.values(localStorage).map(JSON.parse).find((data) => data[0] === props.id);
+  const [answer, setAnswer] = useState(data ? data[1] : '');
+  const [correctness, setCorrectness] = useState(data ? data[2] : '');
 
   async function verify(id) {
     const initialResponse = await fetch(localURL  + new URLSearchParams({
